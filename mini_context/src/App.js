@@ -1,8 +1,10 @@
 import "./App.css";
+import Count from "./components/Count";
 import ThemedComponent from "./components/ThemedComponent";
-import UserInfo from "./components/UserInfo";
+import { CountProvider } from "./context/CountContext";
+//import UserInfo from "./components/UserInfo";
 import { ThemeProvider } from "./context/ThemeContext";
-import UserAuthProvider from "./context/UserAuthProvider";
+//import UserAuthProvider from "./context/UserAuthProvider";
 // import Login from "./components/Login";
 // import Profile from "./components/Profile";
 // import UserContextProvider from "./context/UserContextProvider";
@@ -23,9 +25,11 @@ function App() {
       </UserAuthProvider> */}
 
       <ThemeProvider>
-          <ThemedComponent/>        
+        <ThemedComponent />
+        <CountProvider>
+          <Count />
+        </CountProvider>
       </ThemeProvider>
-
     </div>
   );
 }

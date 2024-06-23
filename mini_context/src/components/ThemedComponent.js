@@ -7,7 +7,15 @@ const ThemedComponent = () => {
     <div>
       <header>
         <h1>{`Current Theme: ${theme}`}</h1>
-        <button onClick={toggleTheme}>Toggle Theme</button>
+        <button onClick={toggleTheme}>{theme=== 'light' ? (
+          <>
+          change to dark
+          </>
+        ):(
+          <>
+          change to light
+          </>
+        )}</button>
       </header>
     </div>
   )
