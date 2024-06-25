@@ -1,5 +1,6 @@
 import "./App.css";
 import Count from "./components/Count";
+import CounterRedux from "./components/CounterRedux";
 import ThemedComponent from "./components/ThemedComponent";
 import { CountProvider } from "./context/CountContext";
 //import UserInfo from "./components/UserInfo";
@@ -26,9 +27,14 @@ function App() {
 
       <ThemeProvider>
         <ThemedComponent />
+
+        <h2>React Context-API Counter</h2>
         <CountProvider>
           <Count />
         </CountProvider>
+
+        <h2>React-Redux Counter</h2>
+        <CounterRedux />
       </ThemeProvider>
     </div>
   );
