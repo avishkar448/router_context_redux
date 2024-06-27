@@ -10,6 +10,7 @@ import UserAuthProvider from "./context/UserAuthProvider";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
 import UserContextProvider from "./context/UserContextProvider";
+import ReactLifecycle from "./components/ReactLifecycle";
 
 function App() {
   return (
@@ -47,6 +48,8 @@ function App() {
         <InfoRedux />
 
         <hr />
+
+        <ReactLifecycle/>
       </ThemeProvider>
     </div>
   );
