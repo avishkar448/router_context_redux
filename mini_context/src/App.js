@@ -11,6 +11,10 @@ import Login from "./components/Login";
 import Profile from "./components/Profile";
 import UserContextProvider from "./context/UserContextProvider";
 import ReactLifecycle from "./components/ReactLifecycle";
+import MyChild from "./components/MyChild";
+import RenderProps from "./components/RenderProps";
+import FocusInputFunction from "./components/FocusInputFunction";
+import Xyz from "./components/Xyz";
 
 function App() {
   return (
@@ -49,7 +53,33 @@ function App() {
 
         <hr />
 
-        <ReactLifecycle/>
+        <ReactLifecycle />
+
+        <hr />
+        <MyChild>
+          <h2>Hello! Avishkar</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi
+            deserunt, tempora quia quod eaque cumque dolores adipisci voluptatum
+            quas harum?
+          </p>
+        </MyChild>
+
+        <hr />
+
+        <RenderProps render={(data) => <div>
+          <h2>Name: {data.name}</h2>
+          <h2>Age: {data.age}</h2>
+        </div>} />
+        <hr />
+
+        <FocusInputFunction/>
+
+        <hr />
+
+        <Xyz name={"Rohit Sharma"} team={"MI"}/>
+        <hr />
+        <Xyz/>
       </ThemeProvider>
     </div>
   );
