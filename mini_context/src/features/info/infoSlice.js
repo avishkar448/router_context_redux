@@ -17,3 +17,4 @@ export const infoSlice=createSlice({
 export const{addInfo} =infoSlice.actions;
 
 export default infoSlice.reducer;
+//
